@@ -1,6 +1,7 @@
 import { init18n } from 'core/i18n/init';
 import en from 'translation/en.json';
 import fr from 'translation/fr.json';
+import bl from 'translation/bl.json';
 
 export const resources = {
   en: {
@@ -9,6 +10,9 @@ export const resources = {
   fr: {
     translation: fr,
   },
+  bl: {
+    translation: bl,
+  }
 };
 
 export const fallbackLng = 'en';

@@ -1,5 +1,13 @@
 {
+  "menu": {
+    "home": "Home",
+    "categories": "Categories",
+    "cart": "Cart",
+    "wishlist": "Wishlist",
+    "profile": "Profile"
+  },
   "button": {
+    "bengali": "Switch language to Bengali",
     "french": "Switch language to French",
     "english": "Switch language to English"
   },

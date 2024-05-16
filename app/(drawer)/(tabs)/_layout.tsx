@@ -1,6 +1,4 @@
 import { Tabs } from 'expo-router';
-import { StyleSheet } from 'react-native';
-
 import { TabBarIcon } from '~/components/TabBarIcon';
 
 export default function TabLayout() {
@@ -14,16 +12,23 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="check" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="categories"
         options={{
           title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="list" color={color} />,
         }}
       />
+        <Tabs.Screen
+            name="cart"
+            options={{
+                title: 'Tab Three',
+                tabBarIcon: ({ color }) => <TabBarIcon name="shopping-cart" color={color} />,
+            }}
+        />
     </Tabs>
   );
 }

@@ -1,5 +1,9 @@
 {
+  "menu": {
+
+  },
   "button": {
+    "bengali": "Changer la langue en bengali",
     "french": "Changer la langue en français",
     "english": "Changer la langue en anglais"
   },
