@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Container>
-        <ScreenContent path="app/(drawer)/(tabs)/categories.tsx" title="categories" />
+        <ScreenContent path="app/(drawer)/(tabs)/categories.tsx" title="User Information" />
       </Container>
     </>
   );

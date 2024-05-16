@@ -21,12 +21,13 @@ export const ScreenContent = ({ title, path, children }: ScreenContentProps) => 
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: 'white',
     alignItems: 'center',
     flex: 1,
     justifyContent: 'center',
   },
   separator: {
-    backgroundColor: '#d1d5db',
+    backgroundColor: '#00a409',
     height: 1,
     marginVertical: 30,
     width: '80%',
