@@ -1,6 +1,7 @@
 import { Tabs } from 'expo-router';
+import { StyleSheet, Image } from 'react-native';
+
 import { TabBarIcon } from '~/components/TabBarIcon';
-import { StyleSheet } from 'react-native';
 
 export default function TabLayout() {
   return (
@@ -16,31 +17,44 @@ export default function TabLayout() {
         name="index"
         options={{
           tabBarLabelStyle: styles.tabBarCustomLabelStyle,
-          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <Image source={require('~/app/(drawer)/(tabs)/home.png')} style={styles.home} />
+          ),
         }}
       />
       <Tabs.Screen
         name="categories"
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="list" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <Image
+              source={require('~/app/(drawer)/(tabs)/categories.png')}
+              style={styles.categories}
+            />
+          ),
         }}
       />
       <Tabs.Screen
         name="cart"
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="shopping-cart" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <Image source={require('~/app/(drawer)/(tabs)/cart.png')} style={styles.cart} />
+          ),
         }}
       />
       <Tabs.Screen
         name="wishlist"
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="bookmark" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <Image source={require('~/app/(drawer)/(tabs)/wishlist.png')} style={styles.wishlist} />
+          ),
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <Image source={require('~/app/(drawer)/(tabs)/profile.png')} style={styles.profile} />
+          ),
         }}
       />
     </Tabs>
@@ -50,5 +64,25 @@ export default function TabLayout() {
 const styles = StyleSheet.create({
   tabBarCustomLabelStyle: {
     textDecorationColor: 'green',
+  },
+  home: {
+    width: 23.61,
+    height: 28,
+  },
+  categories: {
+    width: 21.02,
+    height: 19.11,
+  },
+  cart: {
+    width: 22.92,
+    height: 22.25,
+  },
+  wishlist: {
+    width: 26.28,
+    height: 19.11,
+  },
+  profile: {
+    width: 17.07,
+    height: 20.27,
   },
 });
