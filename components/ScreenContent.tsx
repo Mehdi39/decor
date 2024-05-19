@@ -1,39 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native';
-
-import EditScreenInfo from './EditScreenInfo';
+import { StyleSheet, View } from 'react-native';
 
 type ScreenContentProps = {
-  title: string;
-  path: string;
   children?: React.ReactNode;
 };
 
-export const ScreenContent = ({ title, path, children }: ScreenContentProps) => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
-      <View style={styles.separator} />
-      <EditScreenInfo path={path} />
-      {children}
-    </View>
-  );
+export const ScreenContent = ({ children }: ScreenContentProps) => {
+  return <View style={styles.container}>{children}</View>;
 };
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
-    alignItems: 'center',
     flex: 1,
-    justifyContent: 'center',
-  },
-  separator: {
-    backgroundColor: '#00a409',
-    height: 1,
-    marginVertical: 30,
-    width: '80%',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
   },
 });
